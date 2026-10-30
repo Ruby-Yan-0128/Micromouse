@@ -1,0 +1,22 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Flash via DFU (CubeProgrammer)",
+            "type": "shell",
+            "command": "cube", 
+            "args": [
+                "programmer",
+                "-c",
+                "port=USB1",
+                "-w",
+                "${command:cmake.launchTargetDirectory}/${command:cmake.launchTargetFilename}",
+                "-v",
+                "-g"
+            ],
+            "group": "build",
+            "dependsOn": "CMake: build", 
+            "problemMatcher": []
+        }
+    ]
+}
