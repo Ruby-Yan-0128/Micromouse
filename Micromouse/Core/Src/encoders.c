@@ -14,7 +14,7 @@
  * wheel backwards reads as a negative number.
  */
 int16_t getRightEncoderCounts() {
-	return (int16_t) TIM3->CNT;
+	return -(int16_t) TIM3->CNT;
 
 }
 
@@ -22,7 +22,7 @@ int16_t getRightEncoderCounts() {
  * Return the LEFT encoder's count. The left encoder is on TIM1.
  */
 int16_t getLeftEncoderCounts() {
-	return (int16_t) TIM1->CNT;
+	return -(int16_t) TIM1->CNT;
 
 }
 

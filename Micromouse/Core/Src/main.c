@@ -22,6 +22,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "motors.h"
 #include "encoders.h"
 #include <stdio.h>
 #include "usbd_cdc_if.h"
@@ -122,6 +123,16 @@ HAL_TIM_Encoder_Start(&htim1, TIM_CHANNEL_ALL);
 HAL_TIM_Encoder_Start(&htim3, TIM_CHANNEL_ALL);
 resetEncoders();
 
+HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_1);
+HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_2);
+HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_3);
+HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_4);
+resetMotors();
+
+setMotorLPWM(0.3f);
+setMotorRPWM(-0.5f);
+HAL_Delay(2000);
+resetMotors();
   /* USER CODE END 2 */
 
   /* Infinite loop */
