@@ -47,6 +47,9 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user sources here
     Core/Src/encoders.c
     Core/Src/motors.c
+    Core/Src/irs.c
+    Core/Src/delay.c
+
 )
 
 # Add include paths
