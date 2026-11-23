@@ -29,25 +29,25 @@ uint16_t readIR(IR ir)
 {
     if (ir == IR_1) {
         HAL_GPIO_WritePin(Emitter1_GPIO_Port, Emitter1_Pin, GPIO_PIN_SET);
-        Delay_us(20);
+        delayMicroseconds(20);
         uint16_t value = readIR1();
         HAL_GPIO_WritePin(Emitter1_GPIO_Port, Emitter1_Pin, GPIO_PIN_RESET);
         return value;
     } else if (ir == IR_2) {
         HAL_GPIO_WritePin(Emitter2_GPIO_Port, Emitter2_Pin, GPIO_PIN_SET);
-        Delay_us(20);
+        delayMicroseconds(20);
         uint16_t value = readIR2();
         HAL_GPIO_WritePin(Emitter2_GPIO_Port, Emitter2_Pin, GPIO_PIN_RESET);
         return value;
     } else if (ir == IR_3) {
         HAL_GPIO_WritePin(Emitter3_GPIO_Port, Emitter3_Pin, GPIO_PIN_SET);
-        Delay_us(20);
+        delayMicroseconds(20);
         uint16_t value = readIR3();
         HAL_GPIO_WritePin(Emitter3_GPIO_Port, Emitter3_Pin, GPIO_PIN_RESET);
         return value;
     } else if (ir == IR_4) {
         HAL_GPIO_WritePin(Emitter4_GPIO_Port, Emitter4_Pin, GPIO_PIN_SET);
-        Delay_us(20);
+        delayMicroseconds(20);
         uint16_t value = readIR4();
         HAL_GPIO_WritePin(Emitter4_GPIO_Port, Emitter4_Pin, GPIO_PIN_RESET);
         return value;
